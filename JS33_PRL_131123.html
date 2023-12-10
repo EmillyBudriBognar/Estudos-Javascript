@@ -1,0 +1,52 @@
+<html>
+    <head> <title> Java Script! </title> <meta charset="utf-8"> </head> <body>
+        <form name="form1">
+            <p> Escolha o operação desejada: <br>
+            <input type="radio" name="Op" value="1"> Data Corrente em partes. <br>
+            <input type="radio" name="Op" value="2"> Data Corrente completa. <br>
+            <input type="radio" name="Op" value="3"> Diferença entre Fusos. <br>
+            <input type="radio" name="Op" value="4"> Formatar datas. <br>
+            <br>
+            
+            <input type="button" value="Enviar Dados" onclick="ExibirData()">
+        
+            <script type="text/javascript">
+
+                function ExibirData()
+                {
+                    var data = new Date();
+                    var Operacao = parseInt(document.form1.Op.value);
+
+                    switch (Operacao)
+                    {
+                        case 1:
+                            document.write("Dia da semana: "+(data.getDay()+1)+"<br />");
+                            document.write("Dia do mês: "+(data.getDate())+"<br />");
+                            document.write("Dia da ano: "+(data.getMonth()+1)+"<br />");
+                            document.write("Ano: "+(data.getYear()+1900)+"<br />");
+                        break;
+
+                        case 2:
+                            document.write(data.getHours()+"h "+
+                            data.getMinutes()+"min "+
+                            data.getSeconds()+"s e "+
+                            data.getMilliseconds()+"milissegundos");
+                        break;
+
+                        case 3:
+                            document.write("UTC = "+(new Date()).toUTCString()+"<br />");
+                            document.write("Local = "+(new Date()).toString()+"<br />");
+                            document.write("Diferença = "+(new Date()).getTimezoneOffset() +" minutos <br />");
+                        break;
+
+                        case 4: 
+                            var inicio = ("0" + data.getDate()).substr(-2) + "/"
+                            + ("0" + (data.getMonth() +1)).substr(-2) + "/" + data.getFullYear();
+
+                            document.write("Data de Início: "+ (inicio)+" <br />");
+                        break;
+                    }
+                }
+            </script></p>
+        </form>
+    </body>

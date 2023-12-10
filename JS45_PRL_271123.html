@@ -1,0 +1,60 @@
+<html>
+    <head> <title> Java Script! </title> <meta charset="utf-8"> </head> <body>
+        <form name="form1">
+            <p> Digite seu CPF: <br>
+                <input type="text" name="CPF" width="30" maxlength="30"> <br></p>
+
+            <p> Resultado: <br>
+            <h3></h3>
+                <input type="button" value="Enviar Dados" onclick="verificarCPF()">
+                <script type="text/javascript">
+
+                    function verificarCPF()
+                    {
+                        var CPF = (document.form1.CPF.value);
+                        var POS; // Variaveis de Texto entrada
+                        var Tamanho, Verificar = 0, Resto = 0, Multiplicador = 11, Soma = 0; // Variaveis de Saida
+                        var num = [14];
+                        const resultado = document.querySelector("h3");
+                        // Vetor inteiro de 14 Indices
+
+                        var Tamanho = CPF.lenght; // Processo 1
+
+                        for (i = 0; i < Tamanho; i++) // Laço 1 Para
+                        {
+                            POS = CPF.substr(i, 1); // Processo 2
+
+                            if (POS == "." || POS == "-") // Condicional 1
+                            {
+                                num[i] = 0; // Processo 3
+                            }
+                            else // Negação Condicional 1
+                            {
+                                num[i] = parseInt(POS) * Multiplicador; // Processo 4
+                                Multiplicador--; // Processo 5
+                            }
+                        }
+                        for (j = 0; j< 13; j++) // Laço 2 - Para
+                        {
+                            Soma= Soma + num[j]; // Processo 6
+                        }
+
+                        Resto = Soma % 11; // Processo 7
+                        Verificar = 11 - Resto; // Processo 8
+
+                        if (Resto<=1) Verificar = 0; // Condicional 2 - Processo 9
+                        if (Verificar==num[13]) // Condicional 3
+                        {
+                            resultado.innerText=("válido");
+                            // Saida 1
+                        }
+                        else // Negação Condicional 3
+                        [
+                            resultado.innerText = ("inválido")
+                            // Saida 2
+                        ]
+                    }
+                </script>   
+        </form>
+    </body>
+</html>

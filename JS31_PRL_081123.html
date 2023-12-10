@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Programação e Algoritmo</title>
+<body>
+    <form name="form1">
+        <p> Digite a frase: <BR>
+            <input type="text" name="valor" width="30" maxlength="80"> <br>
+        </p>
+        <input type="button" value="Enviar Dados" onclick="ContarPalavras()">
+
+        <script type="text/javascript">
+        //Alterando valor de uma variavel
+            function ContarPalavras(){
+                var letra; // Variavel de Texto
+                var frase= (document.form1.valor.value); // variavel Texto - Pega o valor no formulario
+                var tamanho= frase.length; // Variavel Inteira - Permite ver o tamanho dos valores atribuidos
+                var contador= 1; // Variavel Inteira
+                for (i=0; i < tamanho; i++) // laço 1 - Para
+                {
+                    letra= frase.substr(i, 1);
+                    // Processo 1 capturar Texto, marcando o inicio e seu tamanho
+                    if (letra == " ") //Condicional 1
+                    {
+                        contador++; // Processo 2
+                    }
+                }
+                alert("Número de palavra(s): " + contador); //Saida 1
+            }
+        </script>
+    </form>
+</body>
+</html>

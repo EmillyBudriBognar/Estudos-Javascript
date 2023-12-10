@@ -1,0 +1,31 @@
+<html>
+    <head> <Title>Programação e Algoritmos Javascript!</Title>
+        <meta charset="utf-8">
+    </head>
+    <BODY>
+        <script type="text/javascript">
+            
+            const HT = Number (prompt ("Digite as Horas Trabalhadas: "));
+            // Entrada 1 - convertendo para em numero
+
+            const SB = Number (HT*9.79);
+            // Processo 1
+
+            const IMP = Number (SB*0.05);
+            // Processo 2
+
+            const SL = Number (SB-IMP);
+            // Processo 3
+
+            document.write ('Salário Líquido: '+SL.toFixed(2));
+            // Exibe resultado no HTML - Saida 1
+
+            document.write (' <BR> Salário Bruto: '+SB.toFixed(2));
+            // Exibe resultado no HTML - Saida 2
+
+            document.write (' <BR> Impostos: '+IMP.toFixed(2));
+            // Exibe resultado no HTML - Saida 3
+
+        </script>
+    </BODY>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Programação e Algoritmos</title>
+</head>
+<body>
+    <button onclick="gerar()">Gerar</button><br/>
+    <p>Gerado:</p><div id="resp"></div>
+
+    <script type="text/javascript">
+        function gerar() {
+            var resp = document.getElementById('resp');
+            resp.innerHTML = Math.floor(1 + 6 * Math.random());
+            // Limitando valores de 1 a 6
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Programação e Algoritmo</title>
+
+        <form name="form1">
+            <p> Clique no botão para digitar uma lista de 10 números aleatórios: <br>
+            <p> Processar Resultado: <br>
+                <input type="button" value="Enviar Dados" onclick="ExibirVetor()">
+                <script type="text/javascript">
+
+                    function ExibirVetor()
+                    {
+                        var lista = [10]; // Vetor com 10 indices
+                        for (i = 0; i < 10; i++) // Laço 1 - Para
+                        {
+                            lista[i]= parseInt (prompt("Digite o número do produto: INDICE ["+i+"]"));
+                            // Entrada 1 - Valores será capturadas nos Indices [x] do vetor
+                        }
+
+                        document.write("Lista de números digitados: <br> "); // Interface 2
+                        for (k = 0; k < 10; k++) // Laço 2 - Para
+                        {
+                            document.write(lista[k] + ", ");
+                        }
+
+                        document.write('<br>');
+                        document.write('<br>');
+
+                        document.write("Nova lista: <br>"); // Interface 3
+                        for (j = 0; j < 10; j++) // Laço 3 - Para
+                        {
+                            if (lista[j] % 2 == 0) // Condicional 1
+                            {
+                                lista[j] = lista[j] + 5; // Processo 1
+                            }
+                            else // Negação Condicional 1
+                            [
+                                lista[j] = lista [j] * 5 // Processo 2
+                            ]
+                            document.write(lista[j] + ", "); // Saida 3
+                        }
+                    }
+                </script>
+        </form>
+    </head>
+</html>

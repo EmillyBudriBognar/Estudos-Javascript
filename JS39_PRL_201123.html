@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+ <head>
+    <title> Java Script! </title>
+ </head>
+ <body>
+  <canvas id = "meuRetangulo" width = "600" height = "400"
+      style = "border: 1px solid black;">
+  O Canvas não está ativado em seu Browser
+ </canvas>
+ <script type="text/javascript">
+  var canvas = document.getElementById("meuRetangulo");
+  var context = canvas.getContext("2d")
+  var l = 100;
+  var L = 20 + (l/2);
+
+  context.strokeRect(20, 20, l, l);
+  context.strokeRect(L, L, l, l);
+
+  context.beginPath();
+  context.moveTo(20, 20);
+  context.lineTo(L, L);
+  context.stroke();
+
+  context.beginPath();
+  context.moveTo(20, 20+l);
+  context.lineTo(L, L+l);
+  context.stroke();
+
+  context.beginPath();
+  context.moveTo(20+l, 20);
+  context.lineTo(L+l, L);
+  context.stroke();
+
+  context.beginPath();
+  context.moveTo(20+l, 20+l);
+  context.lineTo(L+l, L+l);
+  context.stroke();
+ </script>
+ </body>
+</html>

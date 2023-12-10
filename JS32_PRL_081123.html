@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação e Algoritmo</title>
+</head>
+<body>
+    <form name="form1">
+        <p>Digite a Frase</p>
+        <input type="text" name="valor" width="30" maxlength="80"><br>
+        <input type="button" value="Enviar Dados" onclick="ContarPalavras()">
+        <script type="text/javascript">
+        //Alterando valor de uma variável
+
+            function ContarPalavras(){
+                var letra; //Variável de texto
+                var frase = (document.form1.valor.value);
+                //Variável texto - Pega valor no formulário
+                var tamanho = frase.length;
+                //Variável inteira - Permite ver o tamanho dos valores atribuídos
+                var contador = 0 //Variável inteira
+
+                frase = frase.toLowerCase();
+
+                for (i=0; i<tamanho; i++) //Laço 1 - Para
+                {
+                    letra = frase.substr(i,1)
+                    // Processo 1 - capturar Texto, marcando o início e seu tamanho
+
+                    if(
+                        letra == "a" || letra == "á" ||  letra == "à" || letra == "ã" || letra == "â" ||
+                        letra == "e" || letra == "é" || letra == "ê" ||
+                        letra == "i" || letra == "í" ||
+                        letra == "o" || letra == "ó" || letra == "õ" || letra == "ô" ||
+                        letra == "u" || letra == "ú" //Detecta as vogais
+                    )
+                    {
+                        contador++; //Processo 
+                    }
+                
+                }
+                alert("Número de palavra(s): " + contador); //Saída 1
+            }
+
+        </script>
+    </form>
+</body>
+</html>

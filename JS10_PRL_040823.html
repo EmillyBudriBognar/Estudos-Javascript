@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Programação e Algoritmos Java Script</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            const Kwh = Number (prompt("Digite o seu consumo mensal de energia elétrica em horas: "));
+            // Entrada 1 - convertendo para em numero
+
+            const VH = Number (Kwh*0.86);
+            // Processo 1
+
+            const ICMS = Number (VH*0.18);
+            // Processo 2
+
+            const PIS = Number (VH*0.03);
+            // Processo 3
+
+            const COFINS = Number (VH*0.02);
+            // Processo 4
+
+            const VC = Number (VH+ICMS+PIS+COFINS);
+            // Processo 5
+
+            const VT = Number (ICMS+PIS+COFINS);
+            // Processo 6
+
+            document.write ('Valor da Conta: R$'+VC.toFixed(2));
+            // Exibe resultado no HTML - Saida 1
+
+            document.write (' <BR> Valor de Tributos: R$'+VT.toFixed(2));
+            // Exibe resultado no HTML - Saida 2
+
+        </script>
+    </body>
+</html>

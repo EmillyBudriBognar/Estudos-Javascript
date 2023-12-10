@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulário JavaScript! Página 02</title>
+</head>
+
+<body>
+
+<form name="form1">
+
+    <p>01) Já foi capital do Brasil:<br>
+        <input type="radio" name="p1" value="0"> Minas Gerais.<br>
+        <input type="radio" name="p1" value="1"> Rio de Janeiro.<br>
+        <input type="radio" name="p1" value="0"> São Paulo.<br>
+        <input type="radio" name="p1" value="0"> Rio Grande do Sul.<br></p>
+
+    <p>02) Ano da "Proclamação da República":<br>
+        <input type="radio" name="p2" value="0"> 1822.<br>
+        <input type="radio" name="p2" value="0"> 1888.<br>
+        <input type="radio" name="p2" value="1"> 1889.<br>
+        <input type="radio" name="p2" value="0"> 1930.<br></p>
+
+    <p>03) Dia da "Descoberta do Brasil":<br>
+        <input type="radio" name="p3" value="0"> 1 de Janeiro.<br>
+        <input type="radio" name="p3" value="0"> 15 de Novembro.<br>
+        <input type="radio" name="p3" value="0"> 7 de Setembro.<br>
+        <input type="radio" name="p3" value="1"> 22 de Abril.<br></p>
+
+    <p>04) Quem assinou a lei "Áurea":<br>
+        <input type="radio" name="p4" value="0"> Dom Pedro.<br>
+        <input type="radio" name="p4" value="0"> Dom Pedro II.<br>
+        <input type="radio" name="p4" value="1"> Princesa Isabel.<br>
+        <input type="radio" name="p4" value="0"> Duque de Caxias.<br></p>
+
+    <p>05) Ano que a "família real" desembarcou no Brasil:<br>
+        <input type="radio" name="p5" value="1"> 1822.<br>
+        <input type="radio" name="p5" value="0"> 1835.<br>
+        <input type="radio" name="p5" value="0"> 1890.<br>
+        <input type="radio" name="p5" value="0"> 1930.<br></p>
+
+    <p>06) "Era considerada que inicializou a industrialização no Brasil":<br>
+        <input type="radio" name="p6" value="0"> Império.<br>
+        <input type="radio" name="p6" value="0"> República Velha.<br>
+        <input type="radio" name="p6" value="1"> República Nova.<br>
+        <input type="radio" name="p6" value="0"> República Moderna.<br></p>
+
+    <p>07) As inspirações das cores e símbolos da bandeira do Brasil oficial tiveram origem:<br>
+        <input type="radio" name="p7" value="1"> da Família Real.<br>
+        <input type="radio" name="p7" value="0"> da natureza e riquezas do Brasil.<br>
+        <input type="radio" name="p7" value="0"> Inconfidência Mineira.<br>
+        <input type="radio" name="p7" value="0"> Amazônia.<br></p>
+
+    <p>08) A mulher conquistou o direito ao voto a partir:<br>
+        <input type="radio" name="p8" value="0"> Império.<br>
+        <input type="radio" name="p8" value="0"> República Velha.<br>
+        <input type="radio" name="p8" value="1"> República Nova.<br>
+        <input type="radio" name="p8" value="0"> República Moderna.<br></p>
+
+    <p>09) Fundador do colégio de São Paulo, vila de São Paulo:<br>
+        <input type="radio" name="p9" value="0"> Barão de Mauá.<br>
+        <input type="radio" name="p9" value="0"> João Ramalho.<br>
+        <input type="radio" name="p9" value="0"> Anhanguera.<br>
+        <input type="radio" name="p9" value="1"> Padre José de Anchieta.<br></p>
+
+    <p>10) Tratado que definiu as áreas de influência de Portugal e Espanha no Novo Mundo:<br>
+        <input type="radio" name="p10" value="0"> Tratado das Antilhas.<br>
+        <input type="radio" name="p10" value="0"> Tratado de Versalhes.<br>
+        <input type="radio" name="p10" value="1"> Tratado de Tordesilhas.<br>
+        <input type="radio" name="p10" value="0"> Pacto de Haia.<br></p>
+
+    <input type="button" value="Enviar Dados" onclick="Exibir()">
+
+    <script type="text/javascript">
+        // Alterando valor de uma variável
+        function Exibir() {
+            var R1 = parseInt(document.form1.p1.value);
+            var R2 = parseInt(document.form1.p2.value);
+            var R3 = parseInt(document.form1.p3.value);
+            var R4 = parseInt(document.form1.p4.value);
+            var R5 = parseInt(document.form1.p5.value);
+            var R6 = parseInt(document.form1.p6.value);
+            var R7 = parseInt(document.form1.p7.value);
+            var R8 = parseInt(document.form1.p8.value);
+            var R9 = parseInt(document.form1.p9.value);
+            var R10 = parseInt(document.form1.p10.value);
+            
+            var Acertos = R1 + R2 + R3 + R4 + R5 + R6 + R7 + R8 + R9 + R10;
+            var Erros = 10 - Acertos;
+
+            document.write('<br>Acertos: ' + Acertos);
+            document.write('<br>Erros: ' + Erros);
+
+            if (Acertos > 7) {
+                document.write('<br>Muito Bem, Aprovado(a)');
+            } else if (Acertos >= 5 && Acertos < 7) {
+                document.write('<br>Foi bem, mas precisa estudar mais');
+            } else if (Acertos < 5) {
+                document.write('<br>Seu índice está baixo, precisa melhorar');
+            }
+        }
+    </script>
+
+</form>
+
+</body>
+
+</html>

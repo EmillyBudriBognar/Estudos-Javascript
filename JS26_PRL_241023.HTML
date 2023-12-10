@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title> Java Script! </title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <form name="form1">
+        <p> Digite o 1º valor: </p>
+            <input type="text" name="valor1" width="30" maxlength="30"><br>
+        
+        <p> Digite o 2º valor: </p>
+        <input type="text" name="valor2" width="30" maxlength="30"> <br>
+        <p> Escolha o operação desejada: </p>
+            <input type="radio" name="Op" value="1"> Soma. <br>
+            <input type="radio" name="Op" value="2"> Subtrair. <br>
+            <input type="radio" name="Op" value="3"> Multiplicar. <br>
+            <input type="radio" name="Op" value="4"> Dividir. <br>
+            <input type="radio" name="Op" value="5"> Potência. <br>
+            <input type="radio" name="Op" value="6"> Raiz. <br>
+            <input type="radio" name="Op" value="7"> Resto da Divisão. <br>
+
+        <p> Resultado: </p>
+            <input type="text" name="resultado" width="30" maxlength="30"> <br>
+
+            <input type="button" value="Enviar Dados" onclick="Calcular()">
+
+            <script type="text/javascript">
+                //Alterando valor de uma variavel
+                function Calcular() {
+                    var Valor1= parseFloat(document.form1.valor1.value);
+                    var Valor2= parseFloat(document.form1.valor2.value);
+                    var Operacao= parseInt(document.form1.Op.value);
+                    var Resultado = 0;
+
+                    switch (Operacao) {
+                        case 1:
+                            Resultado= Valor1 + Valor2;
+                        break;
+
+                        case 2:
+                            Resultado= Valor1 - Valor2;
+                        break;
+
+                        case 3:
+                            Resultado= Valor1 * Valor2;
+                        break;
+
+                        case 4:
+                            Resultado= Valor1 / Valor2;
+                        break;
+
+                        case 5:
+                            Resultado= Math.pow(Valor1, Valor2);
+                            //POW- Permite pela biblioteca matematica calcular a potência
+                        break;
+
+                        case 6:
+                            Resultado= Math.sqrt(Valor1);
+                            //SQRT - permite pela biblioteca matematica calcular a Raiz Quadrada
+                        break;
+
+                        case 7:
+                            Resultado= Valor1 % Valor2;
+                        break;
+                    }
+                    document.querySelector("[name='resultado']").value = Resultado;
+                    //Esta função permite devolver o valor para caixa de texto
+                }
+        </script>
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <Head> <Title> Programação e Algoritmo Java Script!</Title>
+    <meta charset="utf-8">
+</Head>
+<Body>
+    <script type="text/javascript">
+
+        const CF = Number (prompt ("Digite o custo de fabricação: "));
+        // Entrada 1 - convertendo para em numero
+
+        const PD = Number (CF*0.15);
+        // Processo 1
+
+        const IMP = Number (CF*0.42);
+        // Processo 2
+
+        const PC = Number (CF+PD+IMP);
+        // Processo 3
+
+        document.write (' Preço Consumidor: '+PC, ' / ' +IMP, ' / ' +PD);
+        // Exibe resultado no HTML - Saida 1
+
+    </script>
+</Body>
+</html>

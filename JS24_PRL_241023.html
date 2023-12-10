@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+    <Title> Java Script! </Title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <form name="form1">
+        <p> Digite o tamanho da Lista:</p>
+            <input type="text" name="tamanho" width="30" maxlength="30"><br>
+        <p>Gerador de números:</p>
+            <input type="radio" name="p1" value="1"> Geral. <BR>
+            <input type="radio" name="p1" value="2"> Par/Impar. <BR>
+        <p>Marque o repetidor que você deseja:</p>
+            <input type="radio" name="p2" value="1"> Para. <BR>
+            <input type="radio" name="p2" value="2"> Enquanto. <BR>
+
+            <input type="button" value="Enviar Dados" onclick="Exibir()">
+
+            <script type="text/javascript">
+                //Alterando valor de uma variavel
+                function Exibir() {
+                    var Tamanho= parseInt(document.form1.tamanho.value);
+                    var R1= parseInt(document.form1.p1.value);
+                    var R2= parseInt(document.form1.p2.value);
+                    var Contador= 0;
+                    //Declaração Variaveis
+
+                    switch (R1) // Dispositivo de Escolha
+                    {
+                        case 1: // Escolha 1
+                            if (R2 == 1) // Condição 1
+                            {
+                                for (i = 0; i < Tamanho; i++) // Laço Para 1
+                                {
+                                    document.write('<BR>Números: '+ i);// Saida 1
+                                }
+                            }
+                            else if (R2 == 2) //Outra Opção
+                            {
+                                while (Contador < Tamanho) // Laço - Enquanto 1
+                                {
+                                    document.write('<BR>Números: ' + Contador); // Saida 2
+                                    Contador++; // Processo 1
+                                }
+                            }
+                    break;
+
+                        case 2: // Escolha 2
+                            if (R2 == 1) // Condição 2
+                            {
+                                for (i = 0; i < Tamanho*2; i++) // Laço - Para 2
+                                {
+                                    if (i % 2 == 0) // Condição 2
+                                    {
+                                        document.write('<BR>Lista Par:' + i); //Saida 3
+                                    }
+                                    else // Negação Condional 2
+                                    {
+                                        document.write('-----Lista Ímpar:' + i); // Saida 4
+                                    }
+                                }
+                            }
+                            else if (R2 == 2) // Outra Opção
+                            {
+                                while (Contador < Tamanho*2) // Laço - Enquanto 2
+                                {
+                                    if (Contador % 2 == 0) // Condição 3
+                                    {
+                                        document.write('<BR>Lista Par: ' + Contador); //Saida 5
+                                    }
+                                    else // Negação Condional 3
+                                    {
+                                        document.write('-----Lista Ímpar: ' + Contador); // Saida 6
+                                    }
+                                    Contador++; // Processo 2
+                                }
+                            }
+                        break;
+                        }
+                    }
+        </script>
+    </form>
+</body>
+</html>

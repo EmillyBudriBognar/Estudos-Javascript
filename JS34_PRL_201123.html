@@ -1,0 +1,23 @@
+<html>
+    <head> <Title> Java Script! </Title> <meta charset="utf-8"> </head> <body>
+        <form name="form1">
+            <canvas id="meuRetangulo" width="300" height="200"
+            style="border: 1px solid black;">
+            O Canvas não está ativado em seu Browser
+            </canvas>
+            <script type="text/javascript">
+                var canvas = document.getElementById("meuRetangulo");
+                var context = canvas.getContext("2d")
+                //Desenhando o retângulo pintado de azul
+                context.fillStyle = "blue";
+                context.fillRect(10, 20, 270, 150);
+                //Desenhando uma borda vermelha
+                //de espessura 3
+                context.strokeStyle = "red";
+                context.lineWidth = 3;
+                context.strokeRect(10, 20, 270, 150);
+
+                
+            </script>
+        </form>
+    </body>

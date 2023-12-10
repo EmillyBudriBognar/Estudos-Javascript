@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Programação e Algoritmo </title>
+</head>
+<body>
+    <button onclick="gerar()">Gerar</button><br/>
+    <p>Gerado:</p>
+    <div id="resp"></div>
+    
+    <script type="text/javascript">
+        function gerar() {
+            var resp = document.getElementById('resp');
+            resp.innerHTML = Math.random();
+            //innerHTML para para modificar ou criar elementos HTML dinamicamente
+        }
+    </script>
+</body>
+</html>

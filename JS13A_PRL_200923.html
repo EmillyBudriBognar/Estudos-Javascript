@@ -1,0 +1,30 @@
+<head>
+    <Title> Programação e Algoritmo Java Script </Title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        var Nota; // Variavel Entrada Real
+        var Status= "Verificar"; // Variavel Saida Texto
+
+        Nota= parseFloat(prompt("Digite a nota: "));
+        // Entrada 1 - convertendo para em numero
+
+        if (Nota < 5) // Condicional 1
+        {
+            Status= "Reprovado"; // Processo 1
+        }
+
+        if (Nota >= 5 && Nota < 7) // Condicional 2
+        {
+            Status= "Exame"; // Processo 2
+        }
+
+        if (Nota >= 7) // Condicional 3
+        {
+            Status= "Aprovado"; // Processo 3
+        }
+        document.write("Nota:" + Nota + "<BR>Classificação: " + Status); // Saida 1
+    </script>
+</body>
+</html>

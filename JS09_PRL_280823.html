@@ -1,0 +1,28 @@
+<html>
+    <Head> <Title>Programação e Algoritmos Java Script!</Title>
+    <meta charset="utf-8">
+</Head>
+<BODY>
+    <script type="text/javascript">
+
+        const MOTO = Number (prompt("Digite o percurso diário da moto em Metros: "));
+        // Entrada 1 - convertendo para em numero
+
+        const BIKE = Number (prompt("Digite o percurso diário da bicicleta em Metros: "));
+        // Entrada 2 - convertendo para em numero
+
+        const AUTO = Number (prompt("Digite o percurso diario do automóvel em Metros: "));
+        // Entrada 3 - convertendo para em numero
+
+        const METROS = Number (MOTO+BIKE+AUTO);
+        // Processo 1
+
+        const KM = Number (METROS/1000);
+        // Processo 2
+
+        document.write ('Metragem Total dos Veículos em KM: '+KM);
+        // Exibe resultado no HTML - Saida 1
+
+    </script>
+</BODY>
+</html>

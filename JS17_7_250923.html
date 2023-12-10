@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Revisão JavaScript!</title>
+</head>
+<body>
+    <form name="form1">
+        Primeiro valor:
+        <input type="text" name="text1"><br>
+
+        Segundo valor:
+        <input type="text" name="text2"><br>
+
+        Clique aqui para calcular:
+        <input type="button" value="Calcular" onclick="Calcular()">
+    </form>
+    <script type="text/javascript">
+        // Alterando valor de uma variável
+        function Calcular() {
+            var primeiroNum = eval(document.form1.text1.value);
+            var segundoNum = eval(document.form1.text2.value);
+
+            alert(primeiroNum + segundoNum);
+        }
+    </script>
+</body>
+</html>

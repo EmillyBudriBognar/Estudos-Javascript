@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <title> Java Script! </title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <form name="form1">
+        <p> Digite uma palavra: <BR> <input type="text" name="palavra" width="30" maxlength="30"> <br></p>
+        <p> Escolha o operação desejada: </p>
+        <input type="radio" name="Op" value="1"> Maiúsculo. <BR>
+        <input type="radio" name="Op" value="2"> Minúsculo. <BR>
+        <input type="radio" name="Op" value="3"> Tamanho. <BR>
+
+        <p> Resultado: </p>
+
+        <input type="text" name="resultado" width="30" maxlength="30"> <br>
+        <input type="button" value="Enviar Dados" onclick="Verificar()">
+
+        <script type="text/javascript">
+
+            function Verificar()
+            { 
+                var Palavra= (document.form1.palavra.value);
+                var Operacao= parseInt(document.form1.Op.value);
+                var Resultado;
+
+                switch (Operacao)
+                {
+                    case 1: Resultado= Palavra.toUpperCase();
+                        // Processo 1 - Comando - deixa o valor da variável maiúscula
+                    break;
+
+                    case 2: Resultado= Palavra.toLowerCase();
+                        // Processo 2 - Comando - deixa o valor da variável minúscula
+                    break;
+
+                    case 3: Resultado= Palavra.length;
+                        // Processo 3 - Comando lê o tamanho de variáveis e objetos
+                    break;
+                }
+                document.querySelector("[name='resultado']").value= Resultado;
+            }
+        </script>
+    </form>
+</body>
+</html>

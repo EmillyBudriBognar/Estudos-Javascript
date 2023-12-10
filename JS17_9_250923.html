@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Revisão JavaScript!</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var Nome = prompt("Por favor, digite aqui o seu nome:");
+    </script>
+
+    <form name="form1">
+        Primeira Nota:
+        <input type="text" name="text1"><br>
+
+        Segunda Nota:
+        <input type="text" name="text2"><br>
+
+        Clique aqui para calcular a Média:
+        <input type="button" value="Calcular" onclick="Calcular()">
+
+        <script type="text/javascript">
+            // Alterando valor de uma variável
+            function Calcular() {
+                var primeiroNum = eval(document.form1.text1.value);
+                var segundoNum = eval(document.form1.text2.value);
+                var Media = (primeiroNum + segundoNum) / 2;
+
+                document.write('<br>Nome: ' + Nome); // Saída 1
+                document.write('<br>Média: ' + Media); // Saída 2
+
+                if (Media > 7) {
+                    document.write('<br>Aprovado(a)'); // Saída 3
+                } else if (Media >= 5 && Media < 7) {
+                    document.write('<br>Exame'); // Saída 4
+                } else if (Media < 5) {
+                    document.write('<br>Reprovado(a)'); // Saída 5
+                }
+            }
+        </script>
+    </form>
+</body>
+</html>

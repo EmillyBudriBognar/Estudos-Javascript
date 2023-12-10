@@ -1,0 +1,20 @@
+<html>
+    <head> <title> Java Script! </title> <meta charset="utf-8"> </head> <body>
+        <form name="form1">
+            <canvas id="meuRetangulo" width="600" height="400"
+            style="border: 1px solid black;">
+            O Canvas não está ativando em seu Browser
+            </canvas>
+            <script type="text/javascript">
+                var canvas = document.getElementById("meuRetangulo");
+                var context = canvas.getContext("2d")
+                context.beginPath();
+                context.moveTo(0, 0);
+                context.lineTo(600, 400);
+                context.stroke(); //draw path
+
+                
+            </script>
+        </form>
+    </body>
+</html>

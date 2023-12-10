@@ -1,0 +1,65 @@
+<html>
+    <head> <title> Java Script! </title> <meta charset="utf-8"> </head> <body>
+        <form name="form1">
+            <p> Escolha a operação desejada: <br>
+                <input type="radio" name="Op" value="1"> 1 - Total por Vendedor. <br>
+                <input type="radio" name="Op" value="2"> 2 - Total por Produto. <br>
+                <input type="radio" name="Op" value="3"> 3 - Total Vendido. <br>
+            <p> Resultado: <br>
+                <input type="text" name="resultado" width="30" maxlength="30"><br></p>
+                <input type="button" value="Enviar Dados" onclick="ExibirMatriz()">
+
+                <script type="text/javascript">
+
+            function ExibirMatriz()
+            {
+                //Matriz Bidimensional - com 3 linhas (X) e 4 Colunas (y)
+                var MatrizVenda = [3,4];
+                MatrizVenda=[[22, 15, 6, 7],[12, 14, 8, 23],[5,9,16,18]]
+
+                var Operacao = parseInt(document.form1.Op.value);
+                var Soma = 0;
+                var NumVend = 0;
+                var NumProd = 0; // Variavel intira Entrada - Captura o numero do produto
+
+                switch (Operacao)
+                {
+                    case 1:
+                        NumVend = parseInt (prompt("Digite o número do vendedor: "));
+
+                        for (i = 0; i < 4; i++) // Laço 1 - Para
+                        {
+                            Soma = Soma + MatrizVenda[NumVend][i];
+                            // Processo 1 - Soma valores por vendedor (x) Navega pelos produtos
+                        }
+                        document.querySelector("[name='resultado']").value = Soma;
+                    break;
+
+                    case 2:
+                        NumProd = parseInt (prompt("Digite o número do produto: "));
+
+                        for (j = 0; j < 3; j++) // Laço 2 - Para
+                        {
+                            Soma = Soma + MatrizVenda[j][NumProd];
+                            // Processo 2 - Soma valores por vendedor (y) é fixo e (x) Navega pelos vendedores
+                        }
+                        document.querySelector("[name='resultado']").value = Soma;
+                        break;
+
+                    case 3:
+                        for (i = 0; i < 4; i++) // Laço 3 - Para
+                        {
+                            for (j=0; j<3; j++) // Laço 4 - Para
+                            {
+                                Soma = Soma + MatrizVenda[j][i];
+                                //Processo 3 - Soma valores encontrados por toda a matriz (x) e (y)
+                            }
+                        }
+                        document.querySelector("[name='resultado']").value = Soma;
+                    break;
+                }
+            }
+                </script>
+        </form>
+    </body>
+</html>

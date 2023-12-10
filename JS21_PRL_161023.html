@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Programação e Algoritmo JavaScript!</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        var Numero; // Variável inteira de entrada
+        var Anterior; // Variável inteira de saída
+        var Posterior; // Variável inteira de saída
+        var Atual; // Variável inteira de saída
+
+        Numero = parseInt(prompt("Digite um número: ")); // Entrada 1 convertendo para número
+
+        if (Numero % 3 == 0) { // Condicional 1
+            Atual = Numero / 3; // Processo 1
+            Anterior = Atual - 1; // Processo 2
+            Posterior = Atual + 1; // Processo 3
+
+            document.write("Números: " + Anterior + ", " + Atual + ", " + Posterior); // Exibe resultado no HTML (Saída 1)
+        } else { // Negação Condicional 1
+            document.write("Número: " + Numero + "<br>Não existe soma de números consecutivos para este número digitado."); // Exibe resultado no HTML (Saída 1)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Programação e Algoritmo</title> 
+</head>
+<body>
+    <p>Digite apenas UM caractere:</p>
+    <input id="char" type="text" maxlength="1"><br/>
+    <button onclick="check()">Checar</button>
+
+    <script type="text/javascript">
+        function check() {
+            var letra= document.getElementById("char").value; // Lê apenas o primeiro caractere
+            letra= letra.toLowerCase(); // Comando coloca o caractere en minusculo
+
+            if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') // Condicional 1
+            {
+                alert("Vogal"); // Saida 1
+            }
+            else // Negação - Condicional 1
+            {
+                alert("Consoante"); // Saida 2
+            }
+        }
+    </script>
+</body>

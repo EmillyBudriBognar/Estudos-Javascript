@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação e Algoritmo</title>
+
+    <script>
+        var dado1, dado2; // Variável - Objeto
+        var timeA=0, timeB=0; // Variável - Inteira
+        var contador=0; // Variável - Inteira
+
+        function iniciar()
+        {
+            var button = document.getElementById("rolar");
+            button.addEventListener("click", rolar, false);
+            dado1 = document.getElementById("dado1");
+            dado2 = document.getElementById("dado2");
+            //Captura - Valor do Formulário p/ gerar os valores
+        }
+
+        function rolar()
+        {
+            setImage(dado1, dado2);
+            //Metodo - Configura a imagem para os dois dados
+        }
+
+        function setImage(dado1, dado2) //Usa os dados configurados
+        {
+            var valor1 = Math.floor(1 + Math.random() * 6);
+            var valor2 = Math.floor(1 + Math.random() * 6);
+            //Gera o valor do dado randomicamente
+
+            dado1.setAttribute("src", "dados-funcao-" + valor1 + ".png");
+            dado2.setAttribute("src", "dados-funcao-" + valor2 + ".png");
+            //Adiciona a imagem referente ao valor gerado
+
+            if(contador < 5 && valor1 != valor2) //Condicional
+            {
+                if(valor1 > valor2) //Condicional 2
+                {
+                    timeA++; //Processo 1
+                    document.querySelector("[name='azul']").value = timeA; //Saída 1
+                }
+                else //Negação - Condicional 2
+                {
+                    timeB++; //Processo 1
+                    document.querySelector("[name='vermelho']").value = timeB; //Saída 2
+                }
+            contador++; //Processo 3
+            }
+            else if (contador==5) //Outra opção - Condicional 1
+            {
+                document.getElementById('rolar').disabled = true;
+                //Desabilita o botão
+            }
+        }
+
+        window.addEventListener("load", iniciar, false);
+    </script>
+</head>
+<body>
+    <form action = "#">
+        <input id="rolar" type="button" value="Rodar Dados">
+        <p>Resultado: <br>
+            Grupo Azul --- <br>
+            <input type="text" name="azul" width="30" maxlength="30"><br>
+            Grupo Vermelho --- <br>
+            <input type="text" name="vermelho" width="30" maxlength="30"><br>
+        </p>
+    </form>
+    <img id = "dado1" src="dados-funcao-1.png">
+    <img id = "dado2" src="dados-funcao-2.png">
+</body>
+</html>

@@ -1,0 +1,100 @@
+<html>
+<head>
+    <Title> Programação e Algoritmo Java Script!</Title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+        function Ordenar() {
+            var N1; // Variavel Inteira Entrada
+            var N2; // Variavel Inteira Entrada
+            var N3; // Variavel Inteira Entrada
+
+            var Menor; // Variavel Inteira Saida
+            var Meio; // Variavel Inteira Saida
+            var Maior; // Varivale Inteira Saida
+
+            N1 = parseInt(prompt("Digite o 1° número: "));
+            // Entrada 1 - convertendo para em numero
+
+            N2 = parseInt(prompt("Digite o 2° número: "));
+            // Entrada 2 convertendo para em numero
+
+            N3 = parseInt(prompt("Digite o 3° número: "));
+            // Entrada 3 convertendo para em numero
+
+            if (isNaN(N1)){
+                throw Error("Digite apenas números!");
+            }
+
+            if (isNaN(N2)) {
+                throw Error("Digite apenas números!");
+            }
+
+            if (isNaN(N3)) {
+                throw Error("Digite apenas números!");
+                //throw "myException" - gera uma exceção
+            }
+
+            if (N1 != N2 && N1 != N3 && N2 != N3) // Condicional 1
+                {
+                    if (N1 < N2 && N1 < N3 && N2 < N3) // Condicional 2
+                    {
+                        Menor= N1; // Processo 1
+                        Meio= N2; // Processo 2
+                        Maior= N3; // Processo 3
+                    }
+
+                    if (N1<N2 && N1<N3 && N3<N2) // Condicional 3
+                    {
+                        Menor= N1; // Processo 4
+                        Meio= N3; // Processo 5
+                        Maior= N2; // Processo 6
+                    }
+
+                    if (N2<N1 && N2<N3 && N1<N3) // Condicional 4
+                    {
+                        Menor= N2; // Processo 7
+                        Meio= N1; // Processo 8
+                        Maior= N3; // Processo 9
+                    }
+
+                    if (N2<N1 && N2<N3 && N3<N1) // Condicional 5
+                    {
+                        Menor= N2; // Processo 10
+                        Meio= N3; // Processo 11
+                        Maior= N1; // Processo 12
+                    }
+                
+                    if (N3<N1 && N3<N2 && N1<N2) // Condicional 6
+                    {
+                        Menor= N3; // Processo 13
+                        Meio= N1; // Processo 14
+                        Maior= N2; // Processo 15
+                    }
+
+                    if (N3<N1 && N3<N2 && N2<N1) // Condicional 7
+                    {
+                        Menor= N3; // Processo 16
+                        Meio= N2; // Processo 17
+                        Maior= N1; // Processo 18
+                    }
+
+                document.write("Ordem: " + Menor + ", " + Meio + ", " + Maior); // Saida 1
+                }
+
+            else //Negação - Condicional 1
+            {
+                document.write("Os números não podem ser iguais"); // Saida 2
+            }
+        }
+        try {
+            Ordenar();
+        }
+
+        catch (e){
+            document.write("Digite apenas números!");
+        }
+    </script>
+</body>
+</html>

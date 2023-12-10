@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Programação e Algoritmo</title>
+</head>
+<body>
+    <p>Digite um mês de 1 até 12:</p>
+    <input id="numero" type="number"><br/>
+    <button onclick="exibir()">Exibir mês</button>
+
+    <script type="text/javascript">
+
+        function exibir() {
+            var mes= parseInt(document.getElementById("numero").value);
+            // Note que neste exercicio estamos aplicando o ID //
+
+            switch (mes) {
+                case 1:
+                    alert("Janeiro");
+                break;
+
+                case 2:
+                    alert("Fevereiro");
+                break;
+
+                case 3:
+                    alert("Marco");
+                break;
+
+                case 4:
+                    alert("Abril");
+                break;
+
+                case 5:
+                    alert("Maio");
+                break;
+
+                case 6:
+                    alert("Junho");
+                break;
+
+                case 7:
+                    alert("Julho");
+                break;
+
+                case 8:
+                    alert("Agosto");
+                break;
+
+                case 9:
+                    alert("Setembro");
+                break;
+
+                case 10:
+                    alert("Outubro");
+                break;
+
+                case 11:
+                    alert("Novembro");
+                break;
+
+                case 12:
+                    alert("Dezembro");
+                break;
+
+                default: alert("Voce não digitou um mês válido");
+                break; //break: serve pra parar o Switch Case
+                //Comando Default: deixa como padrão os valores de exceção fora do intervalo
+            }
+        }
+    </script>
+</body>
+</html>

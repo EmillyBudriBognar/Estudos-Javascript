@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <Title>Programação e Algoritmo Java Script!</Title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script type="text/javascript">
+
+        function CalcularMedia() {
+            var Numero; // Variavel real - Entrada
+            var Tamanho; // Variavel inteira - Entrada
+            var Contador = 1; // Variavel - Inteira
+            var Soma = 0; // Variavel - Real
+            var Media; // Variavel real - Saida
+
+            Tamanho = parseInt(prompt("Digite o tamanho da lista: "));
+            // Entrada 1 - convertendo para em numero
+
+            while (Contador <= Tamanho)// Laço 1 - Enquanto
+            {
+                Numero= parseFloat(prompt("Digite o numero: "));
+                Soma= Soma + Numero; //Processo 1
+                if (isNaN(Numero)){
+                    throw Error ("<br>Digite apenas números!");
+                }
+            Contador++; // Processo 2
+            }
+            Media= Soma / Tamanho; // Processo 3
+            document.write("Média: " + Media); // Saida 1
+            if (isNaN(Media)) {
+                throw Error("<br>Digite apenas números!");
+            }
+        }
+
+        try {
+            CalcularMedia();
+        }
+
+        catch (e){
+            document.write("<br>Digite apenas números!");
+        }
+    </script>
+</body>
+</html>
